@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ================================================================== -->
+    <!-- Proje Kimliği (Project Coordinates)                                -->
+    <!-- ================================================================== -->
+    <groupId>com.reqres</groupId>
+    <artifactId>reqres-api-test</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Reqres API Test Projesi</name>
+    <description>
+        Yazılım Test Mühendisliği Proje Ödevi –
+        Rest Assured + JUnit 5 ile reqres.in API Testleri
+    </description>
+
+    <!-- ================================================================== -->
+    <!-- Versiyon Yönetimi (Dependency Version Management)                  -->
+    <!-- ================================================================== -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <!-- Bağımlılık Versiyonları -->
+        <rest-assured.version>5.5.1</rest-assured.version>
+        <junit-jupiter.version>5.11.4</junit-jupiter.version>
+        <hamcrest.version>3.0</hamcrest.version>
+        <jackson.version>2.18.2</jackson.version>
+        <maven-surefire.version>3.5.2</maven-surefire.version>
+    </properties>
+
+    <!-- ================================================================== -->
+    <!-- Bağımlılıklar (Dependencies)                                       -->
+    <!-- ================================================================== -->
+    <dependencies>
+
+        <!-- ─── REST Assured: API test framework ─── -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- ─── JUnit 5 (Jupiter): Test çalıştırıcı ─── -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- ─── Hamcrest: Okunabilir assertion kütüphanesi ─── -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- ─── Jackson Databind: JSON ↔ POJO dönüşümü ─── -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- ================================================================== -->
+    <!-- Build Ayarları                                                      -->
+    <!-- ================================================================== -->
+    <build>
+        <plugins>
+            <!-- Maven Surefire – JUnit 5 testlerini çalıştırır -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

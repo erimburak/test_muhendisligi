@@ -1,0 +1,20 @@
+# ─── Derleme Çıktıları ───
+target/
+
+# ─── IDE Dosyaları ───
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# ─── İşletim Sistemi Dosyaları ───
+.DS_Store
+Thumbs.db
+
+# ─── Maven Wrapper ───
+.mvn/wrapper/maven-wrapper.jar
+
+# ─── Log Dosyaları ───
+*.log
