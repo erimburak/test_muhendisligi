@@ -161,6 +161,6 @@ Proje kapsamında hazırlanan ve modern test mühendisliğindeki yapay zeka yakl
 
 ## 👤 Proje Sahibi
 
-*   **Ders/Ödev:** Yazılım Test Mühendisliği Proje Ödevi
-*   **Geliştirici:** Test Mühendisliği Öğrencisi
+*   **Ders:** Yazılım Test Mühendisliği
+*   **Geliştirici:** Burak Erim
 *   **Tarih:** Haziran 2026
