@@ -39,7 +39,7 @@ class ReqresApiTest extends BaseTest {
     void kullaniciBilgileriniGetir_BasariliSonucDoner() {
         /*
          * ── SENARYO ──
-         * reqres.in API'sindeki id=2 olan kullanıcıyı sorguluyoruz.
+         * reqres.in API'sindeki id =2 olan kullanıcıyı sorguluyoruz.
          * Beklentilerimiz:
          *   • HTTP 200 OK dönmeli
          *   • Response body "data" objesi içinde doğru alanlar olmalı
@@ -54,6 +54,7 @@ class ReqresApiTest extends BaseTest {
             .get(ApiConstants.SINGLE_USER)              // GET isteği gönder
 
         .then()
+            .log().status()                             // Status kodunu/satırını konsola yazdır
             .log().body()                               // Yanıt gövdesini konsola yazdır (debug)
 
             // ── 1) Status Code Doğrulaması ──
@@ -118,6 +119,7 @@ class ReqresApiTest extends BaseTest {
             .post(ApiConstants.CREATE_USER)             // POST isteği gönder
 
         .then()
+            .log().status()                             // Status kodunu/satırını konsola yazdır
             .log().body()                               // Yanıt gövdesini konsola yazdır (debug)
 
             // ── 1) Status Code Doğrulaması ──
